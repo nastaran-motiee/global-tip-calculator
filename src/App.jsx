@@ -1,6 +1,13 @@
 import "./index.css";
-import ListForm from "./components/ListForm";
+import ListBox from "./components/ListBox";
+import { useSelector } from "react-redux";
 function App() {
-  return <div className="container mx-auto px-6"><ListForm /></div>;
+  const st = useSelector((state) => state.employees);
+  console.log(st);
+  return (
+    <div className="container mx-auto px-5 py-4">
+      <ListBox />
+    </div>
+  );
 }
 export default App;
